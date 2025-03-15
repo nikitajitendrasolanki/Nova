@@ -56,7 +56,7 @@ def process_command(command):
 
     elif 'open linkedin' in command:
         speak("Opening linkedln ")
-        webbrowser.open("https://www.linkedin.com/in/nikita-datadriven20")
+        webbrowser.open("https://www.linkedin.com/in/") #your profile
 
     elif 'what is the time' in command:
         now = datetime.datetime.now()
@@ -107,7 +107,7 @@ def process_command(command):
 
 # Get weather info using pyowm API
 def get_weather():
-    API_KEY = 'e7e41cc7987dbadff1da62851d609a12'
+    API_KEY = 'your api'
     owm = pyowm.OWM(API_KEY)  # Replace with your OpenWeatherMap API key
     mgr = owm.weather_manager()  # Correct way to access weather data
     location = "Mumbai,IN"  # Correct format for city and country code
@@ -120,7 +120,7 @@ def get_weather():
 
 # Get the latest news (using NewsAPI)
 def get_news():
-    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=bd66fecb9aef492bb8cb3c6b010c476f'  # Replace with your API key
+    url = 'your api'  # Replace with your API key
     response = requests.get(url)
     news = response.json()
 
@@ -131,8 +131,8 @@ def get_news():
 
 # Send email
 def send_email(recipient, subject, body):
-    sender_email = "nikita.232773201@vcet.edu.in"  # Replace with your email address
-    sender_password = "Nikita@20"  # Replace with your email password
+    sender_email = "sender email"  # Replace with your email address
+    sender_password = "password"  # Replace with your email password
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
